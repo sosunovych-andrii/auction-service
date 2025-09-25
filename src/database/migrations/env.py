@@ -8,13 +8,13 @@ from sqlalchemy.ext.asyncio import async_engine_from_config
 from alembic import context
 
 
-from src.database.settings import DATABASE_URL
+from src.database.settings import db_settings
 from src.database.models.base import Base
 import src.database.models
 
 
 config = context.config
-config.set_main_option("sqlalchemy.url", DATABASE_URL)
+config.set_main_option("sqlalchemy.url", db_settings.url)
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 

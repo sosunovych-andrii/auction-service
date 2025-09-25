@@ -4,7 +4,7 @@ from sqlalchemy import select
 
 from src.database.models.lot import LotModel, LotStatusEnum
 from src.database.settings import AsyncSessionLocal
-from src.websockets.ws_lots import manager
+from src.websockets.manager import manager
 
 
 async def close_expired_lots():

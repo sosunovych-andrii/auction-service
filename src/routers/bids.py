@@ -8,7 +8,7 @@ from src.database.models.bid import BidModel
 from src.database.models.lot import LotStatusEnum, LotModel
 from src.database.settings import get_db
 from src.schemas.bids import BidReadSchema, BidCreateSchema
-from src.websockets.ws_lots import manager
+from src.websockets.manager import manager
 
 bid_router = APIRouter()
 

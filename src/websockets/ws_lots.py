@@ -1,9 +1,8 @@
 from fastapi import WebSocket, WebSocketDisconnect, APIRouter
 
-from src.websockets.manager import ConnectionManager
+from src.websockets.manager import manager
 
 ws_router = APIRouter()
-manager = ConnectionManager()
 
 
 @ws_router.websocket(path="/ws/lots/{lot_id}/")
