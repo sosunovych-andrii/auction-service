@@ -1,7 +1,9 @@
 from fastapi import WebSocket
 
+from src.utils.singleton import Singleton
 
-class ConnectionManager:
+
+class ConnectionManager(metaclass=Singleton):
     def __init__(self) -> None:
         self.active_connections: dict[int, list[WebSocket]] = {}
 
@@ -30,3 +32,6 @@ class ConnectionManager:
                 await connection.send_json(message)
             await connection.close()
         del self.active_connections[lot_id]
+
+
+manager = ConnectionManager()
