@@ -13,7 +13,7 @@
 ## 🚀Installation
 1. **Clone the repository:**
 ```shell
-   git clone https://github.com/sosunovych-andrii/UDataTestTask.git
+   git clone https://github.com/sosunovych-andrii/auction-service.git
 ````
 2. **Create a .env file in the root directory of the project** and copy the content from .env.sample:
 ```shell
